@@ -20,35 +20,38 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text('Ingredient Checker'),
       ),
       body: SafeArea(
-        child: Column(
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Text("Welcome to the app"),
-            ),
-            ElevatedButton(
-              onPressed: (){
-                Navigator.pushNamed(context, '/quiz');
-              },
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Text('Take the quiz'),
-                ],
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Text("Welcome to the app"),
               ),
-            ),
-            ElevatedButton(
-              onPressed: (){
-                Navigator.pushNamed(context, '/scanner');
-              },
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Text('Scan Ingredients'),
-                ],
+              ElevatedButton(
+                onPressed: (){
+                  Navigator.pushNamed(context, '/quiz');
+                },
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Text('Take the quiz'),
+                  ],
+                ),
               ),
-            ),
-          ],
+              ElevatedButton(
+                onPressed: (){
+                  Navigator.pushNamed(context, '/scanner');
+                },
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Text('Scan Ingredients'),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
